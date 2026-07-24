@@ -1,0 +1,332 @@
+/* Global Reset & Dark Theme */
+body {
+    display:flex ;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Logo Styling (Top Left) */
+.logo-container {
+    position: absolute;
+    text-transform:uppercase;
+    top: 50px;
+    left: 55px;
+    background-color: #ff4500; /* Orangered */
+    padding: 15px 25px;
+    z-index: 10;
+}
+
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* Vertical Right Navigation Sidebar */
+/* Ensure the sidebar container has 0 horizontal padding so blocks touch the edges */
+#nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 120px; /* Adjust width as needed */
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 0; /* Crucial: removes any inner padding pinching the items */
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Forces the list to fill the entire sidebar width */
+}
+
+#nav ul li {
+    width: 100%;
+}
+
+/* Make each link fill the entire width of the sidebar completely */
+#nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 20px 0; /* Gives it height */
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0b0b0b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Creates that thin divider line */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover and Active State: Spans edge-to-edge */
+#nav ul li a.active,
+#nav ul li a:hover {
+    background-color: #ff4500;
+    color: #ffffff;
+}
+
+/* Main Banner Section (Split Layout) */
+.banner-sec {
+    display: flex;
+    align-items: flex-end; /* Pushes content down to the bottom */
+    justify-content: space-between;
+    width: 130%; /* Take full width, nav bar will float over it */
+    background-color: #131313;
+    color: white;
+    min-height: 100vh;
+    padding: 0 4% 0 6%; /* Add bottom padding if needed, keep left space */
+    box-sizing: border-box;
+    position: relative;
+    overflow:hidden ;
+}
+
+/* Left Caption Styling */
+.caption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    width: 45%;
+    margin-bottom: 15vh;
+
+}
+
+.caption h1 {
+    font-size: 4.2rem; /* Bumped up from smaller size to match the template */
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.caption h1 ,.caption p {
+    display: block;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.caption h1 .orange {
+    color: #ff4500;
+}
+
+.caption p {
+    display: block;
+    color: #cccccc;
+    font-size: 1.1rem;
+    max-width: 400px; /* Keeps the paragraph from stretching too wide */
+    line-height: 1.5;
+}
+
+.caption h1::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: -80px;
+    left: -100px;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02); /* Extremely faint white text */
+    z-index: -1;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Right Banner Image Styling */
+.banner-img {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.banner-img img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    /* If the image needs to bleed off the bottom edge like the template, you can add: */
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.work-section{
+    background-color: white;
+}
+#works {
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #333333;
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 110px;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.works-content {
+    width: 100%;
+    position: relative;
+}
+
+/* Giant background watermark effect using data-heading */
+.section-title {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.section-title::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: -120px;
+    left: -90px;
+    font-size: 11rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.03); /* Very faint grey watermark */
+    z-index: -1;
+    white-space: nowrap;
+}
+
+/* The small red line under the heading */
+.orange-line {
+    width: 50px;
+    height: 3px;
+    background-color: #ff4500;
+    margin-bottom: 40px;
+    transition: width 3s ease, transform 0.3s ease;
+}
+
+.works-content:hover .orange-line{
+    width:100px;
+}
+
+
+/* Row of image cards */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px; /* Base height for standard grid cells */
+    gap: 20px;
+    width: 100%;
+    max-height: 80vh; /* Keeps it locked within the screen view */
+    box-sizing: border-box;
+}
+
+.work-item {
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Make the first image stretch across 2 rows vertically */
+.work-item.item-large {
+    grid-row: span 2; 
+    grid-column: span 1;
+}
+
+.work-item.item-bag{
+    grid-row:span 1;
+    grid-column: span;
+
+}
+
+/* Ensure images fill their custom grid boxes cleanly without blowing up */
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet and Mobile Layout (screens smaller than 992px) */
+@media (max-width: 1500px) {
+    
+    /* Let the main section stack vertically and remove right padding */
+    .banner-sec {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 20px 50px 20px; /* Leaves room at top for logo/nav if needed */
+        text-align: center;
+        min-height: auto;
+    }
+
+    /* Make caption take full width and center text */
+    .caption {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust heading size for smaller screens */
+    .caption h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Hide or reposition the background watermark if it causes text overflow on mobile */
+    .caption h1::before {
+        display: none; 
+    }
+
+    /* Make the image take full width and center it */
+    .banner-img {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .banner-img img {
+        max-width: 80%;
+    }
+}
