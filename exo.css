@@ -1,24 +1,29 @@
 /* Global Reset & Dark Theme */
 body {
-    display:flex ;
+    display: flex;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    overflow-x: hidden; /* Fixes horizontal stretching for the entire page */
 }
-html{
+
+html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 #wrapper {
     display: flex;
     min-height: 100vh;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Logo Styling (Top Left) */
 .logo-container {
     position: absolute;
-    text-transform:uppercase;
+    text-transform: uppercase;
     top: 50px;
     left: 55px;
     background-color: #ff4500; /* Orangered */
@@ -35,37 +40,35 @@ html{
 }
 
 /* Vertical Right Navigation Sidebar */
-/* Ensure the sidebar container has 0 horizontal padding so blocks touch the edges */
 #nav {
     position: fixed;
     right: 0;
     top: 0;
-    width: 120px; /* Adjust width as needed */
+    width: 120px;
     height: 100vh;
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    padding: 0; /* Crucial: removes any inner padding pinching the items */
+    padding: 0;
 }
 
 #nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Forces the list to fill the entire sidebar width */
+    width: 100%;
 }
 
 #nav ul li {
     width: 100%;
 }
 
-/* Make each link fill the entire width of the sidebar completely */
 #nav ul li a {
     display: block;
     width: 100%;
-    padding: 20px 0; /* Gives it height */
+    padding: 20px 0;
     text-transform: uppercase;
     text-decoration: none;
     color: #0b0b0b;
@@ -74,11 +77,10 @@ html{
     letter-spacing: 1px;
     text-align: center;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Creates that thin divider line */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Hover and Active State: Spans edge-to-edge */
 #nav ul li a.active,
 #nav ul li a:hover {
     background-color: #ff4500;
@@ -88,16 +90,16 @@ html{
 /* Main Banner Section (Split Layout) */
 .banner-sec {
     display: flex;
-    align-items: flex-end; /* Pushes content down to the bottom */
+    align-items: flex-end;
     justify-content: space-between;
-    width: 130%; /* Take full width, nav bar will float over it */
+    width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #131313;
     color: white;
     min-height: 100vh;
-    padding: 0 4% 0 6%; /* Add bottom padding if needed, keep left space */
+    padding: 0 4% 0 6%;
     box-sizing: border-box;
     position: relative;
-    overflow:hidden ;
+    overflow: hidden;
 }
 
 /* Left Caption Styling */
@@ -110,18 +112,17 @@ html{
     position: relative;
     width: 45%;
     margin-bottom: 15vh;
-
 }
 
 .caption h1 {
-    font-size: 4.2rem; /* Bumped up from smaller size to match the template */
+    font-size: 4.2rem;
     font-weight: 900;
     line-height: 1.1;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-.caption h1 ,.caption p {
+.caption h1, .caption p {
     display: block;
     width: 100%;
     margin: 0 0 20px 0;
@@ -135,7 +136,7 @@ html{
     display: block;
     color: #cccccc;
     font-size: 1.1rem;
-    max-width: 400px; /* Keeps the paragraph from stretching too wide */
+    max-width: 400px;
     line-height: 1.5;
 }
 
@@ -146,7 +147,7 @@ html{
     left: -100px;
     font-size: 8rem;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.02); /* Extremely faint white text */
+    color: rgba(255, 255, 255, 0.02);
     z-index: -1;
     white-space: nowrap;
     pointer-events: none;
@@ -164,13 +165,9 @@ html{
     max-width: 80%;
     height: auto;
     display: block;
-    /* If the image needs to bleed off the bottom edge like the template, you can add: */
     margin-bottom: 0;
     margin-right: 0;
 }
-
-
-
 
 #works {
     height: 100vh;
@@ -184,6 +181,7 @@ html{
     display: flex;
     align-items: center;
     overflow: hidden;
+    width: 100%;
 }
 
 .works-content {
@@ -191,7 +189,6 @@ html{
     position: relative;
 }
 
-/* Giant background watermark effect using data-heading */
 .section-title {
     position: relative;
     font-size: 1.8rem;
@@ -208,12 +205,11 @@ html{
     left: -90px;
     font-size: 11rem;
     font-weight: 900;
-    color: rgba(0, 0, 0, 0.03); /* Very faint grey watermark */
+    color: rgba(0, 0, 0, 0.03);
     z-index: -1;
     white-space: nowrap;
 }
 
-/* The small red line under the heading */
 .orange-line {
     width: 50px;
     height: 3px;
@@ -222,24 +218,20 @@ html{
     transition: width 3s ease, transform 0.3s ease;
 }
 
-.works-content:hover .orange-line{
-    width:100px;
+.works-content:hover .orange-line {
+    width: 100px;
 }
-
 
 /* Row of image cards */
 .works-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 200px; /* Base height for standard grid cells */
+    grid-auto-rows: 200px;
     gap: 20px;
     width: 100%;
-    max-height: 80vh; /* Keeps it locked within the screen view */
+    max-height: 80vh;
     box-sizing: border-box;
 }
-
-
 
 .work-item {
     margin: 0;
@@ -247,39 +239,36 @@ html{
     background: #f4f4f4;
     overflow: hidden;
     position: relative;
+    min-width: 0;
 }
 
-/* Make the first image stretch across 2 rows vertically */
 .work-item.item-large {
-    grid-row: span 2; 
+    grid-row: span 2;
     grid-column: span 1;
 }
 
-.work-item.item-bag{
-    grid-row:span 1;
-    grid-column: span;
-
+.work-item.item-bag {
+    grid-row: span 1;
+    grid-column: span 1;
 }
 
-/* Ensure images fill their custom grid boxes cleanly without blowing up */
 .work-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
 #about {
     display: flex;
-    align-items:flex-start; /* Pushes content down to the bottom */
-    width: 130%; /* Take full width, nav bar will float over it */
+    align-items: flex-start;
+    width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #131313;
     color: white;
     min-height: 100vh;
-    padding:80px;
+    padding: 80px;
     box-sizing: border-box;
     position: relative;
-    overflow:hidden ;
+    overflow: hidden;
 }
 
 .about-content {
@@ -287,7 +276,7 @@ html{
     position: relative;
 }
 
-.about-title{
+.about-title {
     position: relative;
     font-size: 1.8rem;
     font-weight: 900;
@@ -303,21 +292,13 @@ html{
     left: -145px;
     font-size: 11rem;
     font-weight: 900;
-    color: rgba(227, 227, 227, 0.03); /* Very faint grey watermark */
+    color: rgba(227, 227, 227, 0.03);
     z-index: -1;
     white-space: nowrap;
 }
 
-.orange-line {
-    width: 50px;
-    height: 3px;
-    background-color: #ff4500;
-    margin-bottom: 40px;
-    transition: width 3s ease, transform 0.3s ease;
-}
-
-.about-sec:hover .orange-line{
-    width:100px;
+.about-sec:hover .orange-line {
+    width: 100px;
 }
 
 .about-row {
@@ -325,6 +306,8 @@ html{
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .about-text-col {
@@ -332,6 +315,7 @@ html{
     color: #cccccc;
     font-size: 1.2rem;
     line-height: 1.6;
+    min-width: 0;
 }
 
 .about-text-col p {
@@ -353,7 +337,8 @@ html{
     flex: 5;
     display: flex;
     justify-content: center;
-    padding-right:50px;
+    padding-right: 50px;
+    min-width: 0;
 }
 
 .img-frame {
@@ -368,19 +353,17 @@ html{
     display: block;
 }
 
-
-
 #services {
-   min-height: auto; 
+    min-height: auto;
+    width: 100%;
     background-color: #0c0c0c;
     position: relative;
     box-sizing: border-box;
-    padding-right: 130px; 
+    padding-right: 130px;
     padding-left: 8%;
-    padding-top: 60px;   /* Space between About and Services */
-    padding-bottom: 80px;/* Gives it breathing room at the bottom */
+    padding-top: 60px;
+    padding-bottom: 80px;
     overflow: hidden;
-
     background-image: linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.9)), url('images/img10.jpg');
     background-size: cover;
     background-position: center;
@@ -390,15 +373,18 @@ html{
 /* 3-Column Grid Container */
 .services-container {
     width: 100%;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    box-sizing: border-box;
 }
 
 /* Individual Card Wrapper */
 .service-card {
     position: relative;
     padding: 20px 0;
+    min-width: 0;
 }
 
 /* The giant background watermark letter (P, W, P) */
@@ -409,7 +395,7 @@ html{
     left: -20px;
     font-size: 10rem;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.03); /* Faint dark-theme watermark */
+    color: rgba(255, 255, 255, 0.03);
     z-index: 1;
     pointer-events: none;
     line-height: 1;
@@ -418,7 +404,7 @@ html{
 /* Service Header Title */
 .service-title {
     position: relative;
-    z-index: 2; /* Ensures text stays above watermark */
+    z-index: 2;
     color: #ffffff;
     font-size: 1.1rem;
     font-weight: 800;
@@ -435,65 +421,4 @@ html{
     font-size: 0.9rem;
     line-height: 1.7;
     margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Tablet and Mobile Layout (screens smaller than 992px) */
-@media (max-width: 1500px) {
-    
-    /* Let the main section stack vertically and remove right padding */
-    .banner-sec {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 100px 20px 50px 20px; /* Leaves room at top for logo/nav if needed */
-        text-align: center;
-        min-height: auto;
-    }
-
-    /* Make caption take full width and center text */
-    .caption {
-        width: 100%;
-        padding-left: 0;
-        margin-bottom: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Adjust heading size for smaller screens */
-    .caption h1 {
-        font-size: 2.8rem;
-    }
-
-    /* Hide or reposition the background watermark if it causes text overflow on mobile */
-    .caption h1::before {
-        display: none; 
-    }
-
-    /* Make the image take full width and center it */
-    .banner-img {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .banner-img img {
-        max-width: 80%;
-    }
 }
