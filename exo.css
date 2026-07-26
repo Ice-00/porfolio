@@ -334,7 +334,7 @@ html {
 }
 
 .about-img-col {
-    flex: 5;
+    flex:1;
     display: flex;
     justify-content: center;
     padding-right: 50px;
@@ -343,7 +343,7 @@ html {
 
 .img-frame {
     border: 8px solid #222222;
-    max-width: 320px;
+    max-width: 400px;
     background: #000;
 }
 
@@ -421,4 +421,55 @@ html {
     font-size: 0.9rem;
     line-height: 1.7;
     margin: 0;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.skill-box {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+/* Outer circle frame */
+.circular-progress {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Inner cutout to make it a ring shape */
+.inner-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #131313; /* Match your section's background color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.skill-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
