@@ -423,20 +423,43 @@ html {
     margin: 0;
 }
 
+
+#skills .section-title::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    font-size: 11rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.03);
+    z-index: -1;
+    white-space: nowrap;
+}
+.section-title {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    z-index: 2;
+}
 .skills-container {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: row; /* Forces horizontal arrangement */
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
     width: 100%;
     padding: 40px 0;
 }
 
 .skill-box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Stack circle and text vertically inside each card */
+    align-items: center;
     text-align: center;
+    flex: 0 0 auto; /* Prevents boxes from stretching full width */
 }
 
 /* Outer circle frame */
@@ -456,14 +479,14 @@ html {
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color: #131313; /* Match your section's background color */
+    background-color: #ffffff; /* Match your section's background color */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
     font-size: 1.1rem;
-    color: #ffffff;
+    color: #080808;
 }
 
 .skill-label {
