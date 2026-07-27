@@ -424,24 +424,44 @@ html {
 }
 
 
+#skills {
+    display: flex;
+    align-items: flex-start;
+    width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
+    background-color: #ffffff;
+    min-height: 50vh;
+    padding: 80px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.skills-content {
+    width: 100%;
+    position: relative;
+}
+
+
 #skills .section-title::before {
     content: attr(data-heading);
     position: absolute;
-    top: -70px;
-    left: -70px;
+    top: -120px;
+    left: -150px;
     font-size: 11rem;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.03);
     z-index: -1;
     white-space: nowrap;
+    letter-spacing: .1px;
 }
 .section-title {
     position: relative;
     font-size: 1.8rem;
     font-weight: 900;
     letter-spacing: 1px;
-    margin-top: 50px;
-    z-index: 2;
+    margin-top: 10px;
+    z-index: 2
 }
 .skills-container {
     display: flex;
@@ -492,7 +512,20 @@ html {
 .skill-label {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+#skill .orange-line {
+    width: 50px;
+    height: 3px;
+    background-color: #ff4500;
+    margin-bottom: 40px;
+    transition: width 3s ease, transform 0.3s ease;
+}
+
+
+.skill-sec:hover .orange-line {
+    width: 100px;
 }
