@@ -426,7 +426,7 @@ html {
 
 #skills {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #ffffff;
     min-height: 50vh;
@@ -468,6 +468,7 @@ html {
     flex-direction: row; /* Forces horizontal arrangement */
     justify-content: center;
     align-items: center;
+    margin-left: 90px;
     flex-wrap: wrap;
     gap: 40px;
     width: 100%;
