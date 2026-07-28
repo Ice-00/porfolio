@@ -1,10 +1,10 @@
 /* Global Reset & Dark Theme */
 body {
-    display: flex;
+   display: block; /* FIXED: Prevents the body from forcing a horizontal layout */
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    overflow-x: hidden; /* Fixes horizontal stretching for the entire page */
+    overflow-x: hidden;
 }
 
 html {
@@ -14,6 +14,7 @@ html {
 
 #wrapper {
     display: flex;
+    flex-direction: column; /* FIXED: Forces all sections inside to stack top-to-bottom */
     min-height: 100vh;
     position: relative;
     width: 100%;
@@ -429,11 +430,12 @@ html {
     align-items: center;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #ffffff;
-    min-height: 50vh;
+    min-height: 10vh;
     padding: 80px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    border: 2px #000000;
 }
 
 
@@ -529,4 +531,196 @@ html {
 
 .skill-sec:hover .orange-line {
     width: 100px;
+}
+
+#resume{
+    display: flex;
+    align-items: center;
+    width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
+    background-color: #ffffff;
+    min-height: 50vh;
+    padding: 80px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.resume-sec {
+    width: 100%;
+    clear: both; /* Forces the resume section to drop below any floating elements above it */
+    position: relative;
+    padding: 80px 0;
+    display: block; /* Ensures it takes up its own full-width row */
+}
+
+.resume-content {
+    width: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resume-sec .section-title::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: -90px;
+    right: -290px;
+    font-size: 11rem;
+    margin-bottom: 300px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.04);
+    z-index: 0;
+    white-space: nowrap;
+}
+
+.resume-sec .section-title {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    margin-left: 700px;
+    z-index: 2;
+    color: #080808;
+}
+
+
+#resume .section-title{
+margin-top: 100px;
+}
+
+.resume-sec .orange-line {
+    width: 50px;
+    height: 3px;
+    background-color: #ff4500;
+    margin-bottom: 40px;
+    margin-left: 1130px;; /* Reset this */
+    transform-origin: right; /* Keeps the right side fixed so it grows left */
+    transform: scaleX(1);
+    transition: transform 0.9s ease;
+}
+
+.resume-sec:hover .orange-line {
+    transform: scaleX(2); /* Doubles the width (50px to 100px) expanding to the left */
+}
+
+.resume-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.resume-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 280px;
+}
+
+.resume-image-box {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+}
+
+.resume-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.resume-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border:none;
+}
+
+.resume-icon {
+    font-size: 1.5rem;
+    color: #080808;
+    background: #f4f4f4;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #050505;
+}
+
+.resume-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resume-details h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #080808;
+}
+
+.resume-details .company {
+    font-size: 0.9rem;
+    color: #555555;
+    font-weight: 500;
+}
+
+.year-badge {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+
+#speech{
+    display: flex;
+    align-items: flex-start;
+    width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
+    background-color: #131313;
+    color: white;
+    min-height: 30vh;
+    padding: 80px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-content {
+    width: 100%;
+    position: relative;
+}
+
+#speech .section-title::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: -120px;
+    left: -145px;
+    font-size: 11rem;
+    font-weight: 900;
+    color: rgba(227, 227, 227, 0.03);
+    z-index: -1;
+    white-space: nowrap;
+}
+
+.section-title {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform:uppercase;
+    z-index: 2;
 }
