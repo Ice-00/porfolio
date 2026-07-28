@@ -597,14 +597,14 @@ margin-top: 100px;
     height: 3px;
     background-color: #ff4500;
     margin-bottom: 40px;
-    margin-left: 1130px;; /* Reset this */
-    transform-origin: right; /* Keeps the right side fixed so it grows left */
+    margin-left: 1130px;; 
+    transform-origin: right; 
     transform: scaleX(1);
     transition: transform 0.9s ease;
 }
 
 .resume-sec:hover .orange-line {
-    transform: scaleX(2); /* Doubles the width (50px to 100px) expanding to the left */
+    transform: scaleX(2); 
 }
 
 .resume-container {
@@ -774,4 +774,174 @@ margin-top: 100px;
 
 .testimonial-sec:hover .orange-line {
     width: 100px;
+}
+
+
+
+.contact-sec {
+  
+    position: relative;
+    padding: 80px 0 0 0;
+    background-color: #ffffff;
+    width: 100%;
+    overflow: hidden; /* Prevents any accidental horizontal scrollbar */
+}
+
+
+
+
+.contact-content .section-title::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: -100px;
+    left: -200px;
+    font-size: 9.5rem;
+    margin-bottom: 300px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.04);
+    z-index: 0;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%; /* Removes any centered restriction */
+    margin: 0;
+    padding: 0; /* Removes side padding */
+    gap: 40px;
+}
+
+/* Left Image styling */
+.contact-image {
+    max-width: 120%;
+    padding:0;
+}
+
+.contact-image img {
+    width: 110%;
+    height: auto;
+    display: block;
+    margin:0;
+    padding: 0;
+}
+
+/* Right Content styling */
+.contact-content {
+  margin-right: 500px;
+  min-width: none;
+  max-width:none;
+}
+
+.contact-content h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.contact-content .orange-line {
+    width: 50px;
+    height: 3px;
+    background-color: #ff4500;
+    margin-bottom: 30px;
+    transition: width 0.3s ease;
+}
+
+.contact-sec:hover .orange-line {
+    width: 100px;
+}
+
+/* Contact Info Top Row */
+.contact-info-list {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.info-item .label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #111;
+    display: block;
+}
+
+.info-item p {
+    font-size: 13px;
+    color: #666;
+    margin: 2px 0 0 0;
+}
+
+/* Form Styles */
+.contact-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 100px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.send-btn {
+    background-color: #ff4500;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+/* Footer Section */
+.site-footer {
+    background-color: #111111;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    margin-top: 80px;
+    font-size: 13px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #fff;
 }
