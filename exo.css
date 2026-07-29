@@ -778,6 +778,7 @@ margin-top: 100px;
 
 
 
+
 .contact-sec {
   
     position: relative;
@@ -788,29 +789,53 @@ margin-top: 100px;
 }
 
 
+.contact-header-wrap {
+    position: relative;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    width: 100%;
+}
 
-
-.contact-content .section-title::before {
-    content: attr(data-heading);
-    position: absolute;
-    top: -100px;
-    left: -200px;
-    font-size: 9.5rem;
-    margin-bottom: 300px;
+/* The black heading text */
+.contact-content .section-title {
+    position: relative;
+    font-size: 24px;
     font-weight: 900;
-    color: rgba(0, 0, 0, 0.04);
-    z-index: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #111;
+    z-index: 2;
+    display:flex;
     white-space: nowrap;
 }
 
+/* The giant background watermark text centered behind it */
+.contact-content .section-title::before {
+    content: attr(data-heading);
+    position: absolute;
+    top: 50%;
+    left:14%;
+    transform: translate(-50%, -50%);
+    font-size: 130px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.04);
+    z-index: -1;
+    user-select: none;
+    white-space: nowrap;
+}
 
+/* The orange line centered nicely underneath */
+.contact-content .orange-line {
+    width: 50px;
+    height: 3px;
+    background-color: #ff4500;
+    left:14%;
+    transition: width 0.3s ease;
+}
 
-
-
-
-
-
-
+.contact-header-wrap:hover .orange-line {
+    width: 100px;
+}
 
 .contact-container {
     display: flex;
@@ -830,29 +855,28 @@ margin-top: 100px;
 }
 
 .contact-image img {
-    width: 110%;
+    width: 120%;
     height: auto;
     display: block;
-    margin:0;
+    margin-top:200px;
     padding: 0;
 }
 
 /* Right Content styling */
 .contact-content {
-  margin-right: 500px;
-  min-width: none;
-  max-width:none;
+ width:100%;
+ 
 }
 
 .contact-content h2 {
     font-size: 28px;
     font-weight: 800;
     color: #111;
-    margin-bottom: 10px;
 }
 
+
 .contact-content .orange-line {
-    width: 50px;
+   width: 50px;
     height: 3px;
     background-color: #ff4500;
     margin-bottom: 30px;
@@ -863,38 +887,64 @@ margin-top: 100px;
     width: 100px;
 }
 
-/* Contact Info Top Row */
 .contact-info-list {
     display: flex;
+    justify-content:flex-start;
     gap: 30px;
     margin-bottom: 40px;
+    width: 100%;
 }
 
+/* Individual item layout (Icon left, text right) */
+.info-item {
+    display: flex;
+    margin-left:0px;
+}
+
+/* Styling the icon */
+.info-item .icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Text block alignment */
+.info-item .info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* EMAIL, SKYPE, PHONE header label */
 .info-item .label {
     font-size: 11px;
-    font-weight: bold;
+    font-weight: 900;
     color: #111;
-    display: block;
+    letter-spacing: 0.5px;
+    margin-bottom: 1px;
 }
 
+/* The actual contact details */
 .info-item p {
     font-size: 13px;
     color: #666;
-    margin: 2px 0 0 0;
+    margin-top:2px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
 }
+
 
 /* Form Styles */
 .contact-form label {
     display: block;
     font-size: 13px;
+    white-space: none;
     font-weight: bold;
     color: #333;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
+.contact-form input ,.contact-form textarea {
+    width: 60%;
     padding: 14px;
     border: 1px solid #e0e0e0;
     background-color: #fafafa;
@@ -904,7 +954,7 @@ margin-top: 100px;
 }
 
 .contact-form textarea {
-    height: 120px;
+    height: 100px;
     resize: none;
 }
 
@@ -915,33 +965,43 @@ margin-top: 100px;
     padding: 12px 25px;
     font-weight: bold;
     cursor: pointer;
-    text-transform: uppercase;
+    text-transform: uppercase;;
     font-size: 13px;
 }
 
 /* Footer Section */
 .site-footer {
     background-color: #111111;
-    color: #888;
+    color: #fbf8f8;
+    font-style: bold;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
     padding: 25px 60px;
-    margin-top: 80px;
+    margin-top:0;
     font-size: 13px;
 }
 
 .social-icons {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    margin-top: 30px;
 }
 
 .social-icons a {
-    color: #888;
-    text-decoration: none;
-    transition: color 0.2s;
+    display: inline-block;
 }
 
-.social-icons a:hover {
-    color: #fff;
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 0.7;
 }
