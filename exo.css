@@ -733,8 +733,8 @@ margin-top: 100px;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #131313;
     color: white;
-    min-height: 30vh;
-    padding: 80px;
+    min-height: 50vh;
+    padding: 100px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -820,10 +820,12 @@ margin-top: 100px;
 .contact-sec {
   
     position: relative;
-    padding: 80px 0 0 0;
+    padding: 52px 0 0 0 ;
     background-color: #ffffff;
-    width: 100%;
+    width: 80%;
+    height:926px;
     overflow: hidden; /* Prevents any accidental horizontal scrollbar */
+    white-space: none;
 }
 
 
@@ -837,10 +839,11 @@ margin-top: 100px;
 /* The black heading text */
 #contact .section-title {
     position: relative;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 900;
     font-family: 'UniSansHeavyCAPS'!important;
     letter-spacing: 1px;
+    padding-top:50px;
     margin-left: 200px;
     text-transform: uppercase;
     color: #111;
@@ -854,9 +857,10 @@ margin-top: 100px;
     content: attr(data-heading);
     position: absolute;
     top: 50%;
-    left:10%;
+    left:17%;
     transform: translate(-50%, -50%);
-    font-size: 11rem;
+    padding-top:50px;
+    font-size: 12rem;
     font-family: 'UniSansHeavyCAPS'!important;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.04);
@@ -891,15 +895,17 @@ margin-top: 100px;
 
 /* Left Image styling */
 .contact-image {
-    max-width: 130%;
+    max-width: 200%;
+    max-height: fit-content;
     padding:0;
 }
 
 .contact-image img {
-    width: 130%;
-    height: auto;
+    width: 160%;
+    height:865px;
     display: block;
-    margin-top:200px;
+    margin-top:70px;
+    margin-bottom: 300px;
     padding: 0;
 }
 
@@ -930,9 +936,9 @@ margin-top: 100px;
 
 .contact-info-list {
     display: flex;
-    justify-content:flex-start;
     gap: 30px;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-left: 200px;
     width: 100%;
 }
 
@@ -944,7 +950,7 @@ margin-top: 100px;
 
 /* Styling the icon */
 .info-item .icon {
-    font-size: 20px;
+    font-size: 10px;
     line-height: 1;
 }
 
@@ -956,17 +962,18 @@ margin-top: 100px;
 
 /* EMAIL, SKYPE, PHONE header label */
 .info-item .label {
-    font-size: 11px;
-    font-weight: 900;
+    font-size: 13px;
+    font-weight: 0px;
     color: #111;
+    font-family: 'UniSansHeavyCAPS';
     letter-spacing: 0.5px;
     margin-bottom: 1px;
 }
 
 /* The actual contact details */
 .info-item p {
-    font-size: 13px;
-    color: #666;
+    font-size: 16px;
+    color: #868893;
     margin-top:2px;
     white-space: nowrap;
     cursor: pointer;
@@ -977,31 +984,50 @@ margin-top: 100px;
     color:#EF4836;
 }
 
+.contact-form{
+    margin-top: 100px;
+}
 
 /* Form Styles */
 .contact-form label {
     display: block;
-    font-size: 13px;
+    font-size: 16px;
+    padding-bottom: 10px;
     white-space: none;
+    font-style:bold;
     font-weight: bold;
     color: #333;
-    margin-left: 300px;
-    margin-top: 30px;
+    margin-left: 410px;
+    margin-top: 20px;
 }
 
 .contact-form input ,.contact-form textarea {
     width: 40%;
-    padding: 14px;
+    padding: 15px;
+    width:470px;
     border: 1px solid #e0e0e0;
-    background-color: #fafafa;
-    margin-bottom: 20px;
+    background-color: transparent;
+    margin-bottom: 30px;
     font-size: 14px;
-    margin-left: 300px;
+    margin-left: 410px;
     box-sizing: border-box;
 }
 
+.contact-form textarea:active{
+ border-color:none;
+}
+
+
+.email{
+    height: 52px;
+    margin-bottom: 10px;
+}
+.name{
+    height:52px;
+}
+
 .contact-form textarea {
-    height: 100px;
+    height: 104px;
     resize: none;
 }
 
@@ -1009,10 +1035,12 @@ margin-top: 100px;
     background-color:#EF4836;
     color: #ffffff;
     border: none;
-    margin-left: 300px;
+    margin-left: 410px;
     padding: 12px 25px;
     font-weight: bold;
+    height:55px;
     cursor: pointer;
+    width: 197px;
     text-transform: uppercase;;
     font-size: 13px;
 }
