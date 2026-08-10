@@ -128,7 +128,7 @@ html {
     line-height: 1.1;
     font-family: 'UniSansHeavyCAPS', sans-serif;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .caption h1, .caption p {
@@ -148,6 +148,8 @@ html {
     font-size: 26px;
     max-width: 400px;
     line-height: 1.5;
+    padding-top: 0px;
+    margin-top: 1px;
     margin-right: 100px;
 }
 
@@ -306,7 +308,7 @@ height:270px;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #131313;
     color: white;
-    min-height: 50vh;
+    min-height: 679px;
     padding: 20px;
     box-sizing: border-box;
     position: relative;
@@ -323,7 +325,7 @@ height:270px;
     display: inline-block; /* Unlocks the width so margins and transforms work cleanly */
     font-size: 2.8rem;
     font-weight: 900;
-    margin-top: 60px;
+    margin-top: 116px;
     font-family: 'UniSansHeavyCAPS'!important;
     letter-spacing: 1px;
     margin-bottom: 0px;
@@ -334,14 +336,15 @@ height:270px;
 .section-title::before {
     content: attr(data-heading);
     position: absolute;
-    top: -80px;
+    margin-top: -129px;
     left: -250px;
+    padding-top: ;
     margin-top: 0 auto;
     margin-left: 30px;
     font-size: 12rem;
     font-family: 'UniSansHeavyCAPS';
     font-weight: 900;
-    color: rgba(227, 227, 227, 0.03);
+    color: rgba(255, 253, 253, 0.04);
     z-index: -1;
     white-space: nowrap;
 }
@@ -378,7 +381,7 @@ height:270px;
     color:#B9B9B9;
     font-family: Helvetica;
     line-height: 40px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 350px;
 }
 
@@ -417,9 +420,9 @@ height:270px;
     position: relative;
     box-sizing: border-box;
     padding-right: 130px;
-    padding-left: 8%;
-    padding-top: 60px;
-    padding-bottom: 80px;
+    padding-left: 130px; /* Balanced left padding */
+    padding-top: 100px;
+    padding-bottom: 50px;
     overflow: hidden;
     background-image: linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.9)), url('images/img10.jpg');
     background-size: cover;
@@ -430,31 +433,31 @@ height:270px;
 /* 3-Column Grid Container */
 .services-container {
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the whole grid block cleanly */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 40px; /* Gives nice breathing room between the 3 service columns */
     box-sizing: border-box;
 }
 
 /* Individual Card Wrapper */
 .service-card {
     position: relative;
-    padding: 20px 0;
+    padding: 20px;
     min-width: 0;
 }
 
-/* The giant background watermark letter (P, W, P) */
+/* The giant background watermark letter - shifted right/down to sit correctly behind text */
 .service-card::before {
     content: attr(data-bg-letter);
     position: absolute;
-    top: -50px;
-    left: -20px;
-    font-size: 10rem;
+    top: -30px;
+    left: 0px;
+    font-size: 8.5rem; /* Scaled down slightly to fit cleanly inside the card */
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.04); /* Subtle, elegant transparency */
     z-index: 1;
     pointer-events: none;
     line-height: 1;
@@ -476,15 +479,10 @@ height:270px;
 .service-desc {
     position: relative;
     z-index: 2;
-    color: #888888;
+    color: #BCBCBC;
     font-size: 0.9rem;
     line-height: 1.7;
     margin: 0;
-}
-
-.service-desc p{
-    display: flex;
-    flex-wrap: wrap;
 }
 
 
@@ -493,7 +491,7 @@ height:270px;
     align-items: center;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #ffffff;
-    min-height: 10vh;
+    min-height:538px;
     padding: 50px;
     box-sizing: border-box;
     position: relative;
@@ -604,7 +602,7 @@ height:270px;
     align-items: center;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #ffffff;
-    min-height: 70vh;
+    height: 826px;
     padding: 50px;
     box-sizing: border-box;
     position: relative;
@@ -676,7 +674,6 @@ margin-top: 100px;
     align-items: center;
     flex-wrap: nowrap;
     gap: 0px;
-    margin-top: 70px;
 }
 
 .resume-column {
@@ -760,7 +757,7 @@ margin-top: 100px;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #131313;
     color: white;
-    min-height: 50vh;
+    min-height: 588px;
     padding: 50px;
     box-sizing: border-box;
     position: relative;
