@@ -481,17 +481,17 @@ html {
 }
 
 
-#skills {
+.skill-sec {
     display: flex;
     align-items: center;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #ffffff;
-    min-height:538px;
+    height:536px;
     padding: 50px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    border: 2px #000000;
+    border: 1px solid #e0e0e0;
 }
 
 
@@ -504,8 +504,8 @@ html {
 #skills .section-title::before {
     content: attr(data-heading);
     position: absolute;
-    top: -80px;
-    left: -250px;
+    top: -100px;
+    left: -280px;
     font-size: 12rem;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.03);
@@ -516,10 +516,11 @@ html {
 #skills .section-title {
     position: relative;
     font-family: 'UniSansHeavyCAPS'!important;
-    font-size: 2.4rem!important;
+    font-size: 36px!important;
     font-weight: 1000;
+    margin-bottom: 12px;
     letter-spacing: 1px;
-    margin-left: 200px;
+    margin-left: 310px;
     margin-top: 30px;
     z-index: 2
 }
@@ -546,9 +547,10 @@ html {
 /* Outer circle frame */
 .circular-progress {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 123px;
+    height: 123px;
     border-radius: 50%;
+    background-color:#EF4836;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -558,8 +560,8 @@ html {
 /* Inner cutout to make it a ring shape */
 .inner-circle {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
     background-color: #ffffff; /* Match your section's background color */
     border-radius: 50%;
     display: flex;
@@ -580,10 +582,10 @@ html {
 
 #skill,.orange-line {
     width: 50px;
-    height: 7px;
+    height: 5px;
     background-color:#EF4836;
     margin-bottom: 40px;
-    margin-left:201px;
+    margin-left:310px;
     transition: width 3s ease, transform 0.3s ease;
 }
 
@@ -591,6 +593,9 @@ html {
 .skill-sec:hover .orange-line {
     width: 100px;
 }
+
+
+
 
 #resume{
     display: flex;
@@ -622,8 +627,8 @@ html {
     content: attr(data-heading);
     position: absolute;
     top: -90px;          /* Move this up or down relative to the main title */
-    left: -80px;         /* Change from right to left to control horizontal offset cleanly */
-    font-size: 11rem;
+    left: -30px;         /* Change from right to left to control horizontal offset cleanly */
+    font-size: 12rem;
     font-weight: 1000;
     color: rgba(0, 0, 0, 0.04);
     z-index: 0;
@@ -633,11 +638,13 @@ html {
 
 #resume .section-title {
     position: relative;
-    font-size: 2rem;
+    font-size: 36px;
     font-weight: 900;
-    letter-spacing: 1px;
+    font-family: 'UniSansHeavyCAPS'!important;
     margin-top: 150px;   /* Adjusted down from 500px so it's not halfway down the page */
-    right: -700px;  /* Adjust this to move the main title left/right */
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    right: -690px;  /* Adjust this to move the main title left/right */
     z-index: 2;
     color: #080808;
 }
@@ -652,7 +659,7 @@ margin-top: 100px;
     height: 7px;
     background-color:#EF4836;
     margin-bottom: 40px;
-    margin-left: 123vh;; 
+    margin-left: 114.5vh;; 
     transform-origin: right; 
     transform: scaleX(1);
     transition: transform 0.9s ease;
@@ -667,6 +674,8 @@ margin-top: 100px;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-top: 0px;
+    margin-top: 0px;
     flex-wrap: nowrap;
     gap: 0px;
 }
