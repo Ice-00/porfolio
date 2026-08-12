@@ -205,11 +205,12 @@ html {
 
 #works .section-title{
     position: relative;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 900;
-    margin-left: 300px;
+    margin-left: 270px;
     font-family: 'UniSansHeavyCAPS'!important;
     letter-spacing: 1px;
+    margin-bottom: 12px;
     margin-top: 100px;
     z-index: 2;
 }
@@ -219,18 +220,18 @@ html {
     position: absolute;
     top: -100px;
     left: -270px;
-    font-size: 11.5rem;
+    font-size: 12rem;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.03);
     z-index: -1;
     white-space: nowrap;
 }
 .work-sec .orange-line {
-    position: static;
     width: 50px;
     height: 5px;
     background-color: #EF4836;
-    margin-left: 300px; 
+    margin-top: 0px;
+    margin-left: 271px; 
     transition: width 0.3s ease, transform 0.3s ease;
 }
 
@@ -242,55 +243,52 @@ html {
 /* Row of image cards */
 .works-grid {
     display: grid;
-    grid-template-columns: 290px 280px 480px;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 293px); /* Reduced height to make rows more compact */
     gap: 30px; 
-    margin-top: 10px;
-    margin-left: 120px;
-    width: 100%;
+    height: 614px;
+    margin-top: 90px;
+    margin-left: 280px;
+    width:1162px; /* Prevents it from overflowing past the right side */
+    max-width: 1200px;        /* Keeps it from stretching too wide on large screens */
     box-sizing: border-box;
     margin-bottom: 100px;
 }
 
-.work-item {
-    background: #f4f4f4;
-    overflow: hidden;
-    position: relative;
-    margin: 0;
-    padding: 0;
+/* Division 1: Columns 1 to 5 (Width: 5), Spans both rows */
+.grid-col.col-bottle {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+
+/* Division 2: Columns 6 to 8 (Width: 3) */
+.grid-col.col-middle {
+    grid-column: 5 / span 3 ;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Division 3: Columns 9 to 12 (Width: 4) */
+.grid-col.col-right {
+    grid-column: 8 / span 5;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.work-item .item-tools{
+    max-height: 252px !important;
 }
 
 
-.work-item.item-bottle {
-    grid-column: 1;
-    grid-row: span 2;
+.grid-col.col-bottle .work-item {
+    height: 609px;
 }
 
-.work-item.item-bike {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-
- 
-.item2{
-    display:flex ;
-    flex-direction:column ;
-    height: 100vh!important;
-    gap: 30px
-}
-
-.item2 .item-tools{
-height:270px;
-}
-
-/* 4. Bag: bottom middle */
-.work-item.item-bag {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-/* 5. Tools: bottom right (wider) */
+/* Make individual work items fill the available flex space */
  
 .work-item img {
     width: 100%;
@@ -300,15 +298,13 @@ height:270px;
 }
 
 
-
-
 #about {
     display: flex;
     align-items: flex-start;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #131313;
     color: white;
-    min-height: 679px;
+    min-height: 649px;
     padding: 20px;
     box-sizing: border-box;
     position: relative;
@@ -325,7 +321,7 @@ height:270px;
     display: inline-block; /* Unlocks the width so margins and transforms work cleanly */
     font-size: 2.8rem;
     font-weight: 900;
-    margin-top: 116px;
+    margin-top: 60px;
     font-family: 'UniSansHeavyCAPS'!important;
     letter-spacing: 1px;
     margin-bottom: 0px;
@@ -336,15 +332,14 @@ height:270px;
 .section-title::before {
     content: attr(data-heading);
     position: absolute;
-    margin-top: -129px;
+    top: -80px;
     left: -250px;
-    padding-top: ;
     margin-top: 0 auto;
     margin-left: 30px;
     font-size: 12rem;
     font-family: 'UniSansHeavyCAPS';
     font-weight: 900;
-    color: rgba(255, 253, 253, 0.04);
+    color: rgba(255, 253, 253, 0.0);
     z-index: -1;
     white-space: nowrap;
 }
@@ -381,7 +376,7 @@ height:270px;
     color:#B9B9B9;
     font-family: Helvetica;
     line-height: 40px;
-    margin-top: 0px;
+    margin-top: 20px;
     margin-left: 350px;
 }
 
