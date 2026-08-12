@@ -567,16 +567,16 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    font-size: 1.1rem;
+    font-family: 'UniSansHeavyCaps';
+    font-weight: bold;
+    font-size: 1.4rem;
     color: #080808;
 }
 
 .skill-label {
-    font-size: 0.95rem;
+    font-size: 17px;
     font-weight: 700;
-    color: #000000;
-    text-transform: uppercase;
+    color: #171717;
     letter-spacing: 0.5px;
 }
 
