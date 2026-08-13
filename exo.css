@@ -317,7 +317,7 @@ html {
 }
 
 .about-content .section-title  {
-   position: relative;
+    position: relative;
     display: inline-block; /* Unlocks the width so margins and transforms work cleanly */
     font-size: 2.8rem;
     font-weight: 900;
@@ -339,7 +339,7 @@ html {
     font-size: 12rem;
     font-family: 'UniSansHeavyCAPS';
     font-weight: 900;
-    color: rgba(255, 253, 253, 0.0);
+    color: rgba(255, 253, 253, 0.04);
     z-index: -1;
     white-space: nowrap;
 }
@@ -531,7 +531,7 @@ html {
     align-items: center;
     margin-left: 200px;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 65px;
     width: 100%;
     padding: 40px 0;
 }
@@ -577,7 +577,7 @@ html {
     font-size: 17px;
     font-weight: 700;
     color: #171717;
-    letter-spacing: 0.5px;
+    letter-spacing: 0px;
 }
 
 #skill,.orange-line {
@@ -603,14 +603,12 @@ html {
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
     background-color: #ffffff;
     height: 826px;
-    padding: 50px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
 }
 .resume-sec {
-    width: 100%;
-    clear: both; /* Forces the resume section to drop below any floating elements above it */
+    width: 100%; /* Forces the resume section to drop below any floating elements above it */
     position: relative;
     padding: 80px 0;
     display: block; /* Ensures it takes up its own full-width row */
@@ -674,8 +672,6 @@ margin-top: 100px;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0px;
-    margin-top: 0px;
     flex-wrap: nowrap;
     gap: 0px;
 }
@@ -691,6 +687,7 @@ margin-top: 100px;
 .resume-image-box {
     flex: 0 0 auto;
     display: flex;
+    margin-top:0px;
     justify-content: center;
     align-items: center;
     max-width: 450px;
@@ -698,6 +695,7 @@ margin-top: 100px;
 
 .resume-image-box img {
     width: 100%;
+    padding-top:0px;
     height: auto;
     display: block;
 }
@@ -759,7 +757,7 @@ margin-top: 100px;
     display: flex;
     align-items: flex-start;
     width: 100%; /* Fixed from 130% to prevent horizontal blowouts */
-    background-color: #131313;
+    background-color:#191919;
     color: white;
     min-height: 588px;
     padding: 50px;
@@ -780,9 +778,10 @@ margin-top: 100px;
 #speech .section-title::before {
     content: attr(data-heading);
     position: absolute;
-    top: -120px;
-    left: -200px;
-    font-size: 11rem;
+    top: -60px;
+    left: -278px;
+    font-family: 'UniSansHeavyCAPS'!important;
+    font-size: 12rem;
     font-weight: 900;
     color: rgba(227, 227, 227, 0.03);
     z-index: -1;
@@ -791,11 +790,12 @@ margin-top: 100px;
 
 #speech .section-title {
     position: relative;
-    font-size: 1.8rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    margin-left: 200px;
+    font-family: 'UniSansHeavyCAPS'!important;
+    font-size: 36px;
+    font-weight: 900;   
+    padding-top: 40px;
+    margin-bottom: 13px;
+    margin-left: 316px;
     text-transform:uppercase;
     z-index: 2;
 }
@@ -805,7 +805,8 @@ margin-top: 100px;
     display: flex;
     align-items: center;
     gap: 50px;
-    margin-left: 200px;
+    margin-left: 300px;
+    margin-top: 70px;
 }
 
 /* Strictly makes the 4 images form a neat 2x2 square block */
@@ -833,17 +834,15 @@ margin-top: 100px;
 
 .testimonial-sec .orange-line {
     width: 50px;
-    height: 7px;
+    height: 5px;
     background-color:#EF4836;
-    margin-bottom: 40px;
+    margin-left: 33vh;
     transition: width 0.4, transform 0.9s ease;
 }
 
 .testimonial-sec:hover .orange-line {
     width: 100px;
 }
-
-
 
 
 .contact-sec {
@@ -903,7 +902,7 @@ margin-top: 100px;
     width: 50px;
     height: 3px;
     background-color:#EF4836;
-    left:-100px;
+    left:-90px;
     transition: width 0.3s ease;
 }
 
