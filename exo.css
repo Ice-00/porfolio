@@ -645,7 +645,8 @@ html {
     color: rgba(0, 0, 0, 0.04);
     z-index: 0;
     white-space: nowrap;
-    margin-bottom: 0;    /* Removed the massive 700px margin that was breaking layout */
+    margin-bottom: 0;  
+    padding-bottom: 0px;
 }
 
 #resume .section-title {
@@ -697,7 +698,7 @@ margin-top: 100px;
     gap: 0px;
     min-width: 280px;
 }
-
+z
 .resume-image-box {
     flex: 0 0 auto;
     display: flex;
@@ -760,10 +761,11 @@ margin-top: 100px;
     color: #ffffff;
     font-size: 0.75rem;
     font-weight: 700;
+    text-align: center;
     padding: 4px 10px;
     margin-top: 8px;
     text-transform: uppercase;
-    width: fit-content;
+    width: 100px;
 }
 
 
@@ -994,7 +996,7 @@ margin-top: 100px;
 /* Styling the icon */
 .info-item .icon {
     font-size: 10px;
-    line-height: 1;
+    line-height: 1; 
 }
 
 /* Text block alignment */
