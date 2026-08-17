@@ -622,10 +622,10 @@ html {
     overflow: hidden;
 }
 .resume-sec {
-    width: 100%; /* Forces the resume section to drop below any floating elements above it */
+    width: 100%; 
     position: relative;
     padding: 80px 0;
-    display: block; /* Ensures it takes up its own full-width row */
+    display: block;
 }
 
 .resume-content {
@@ -638,13 +638,14 @@ html {
 .resume-sec .section-title::before {
     content: attr(data-heading);
     position: absolute;
-    top: -90px;          /* Move this up or down relative to the main title */
-    left: -30px;         /* Change from right to left to control horizontal offset cleanly */
+    top: -50px;         
+    left: -30px;       
     font-size: 12rem;
     font-weight: 1000;
     color: rgba(0, 0, 0, 0.04);
     z-index: 0;
     white-space: nowrap;
+    letter-spacing: 0px;
     margin-bottom: 0;  
     padding-bottom: 0px;
 }
@@ -654,8 +655,10 @@ html {
     font-size: 36px;
     font-weight: 900;
     font-family: 'UniSansHeavyCAPS'!important;
-    margin-top: 150px;   /* Adjusted down from 500px so it's not halfway down the page */
-    margin-bottom: 0px;
+    margin-top: 150px;
+    top:-1px;   /* Adjusted down from 500px so it's not halfway down the page */
+    margin-bottom: 10px;
+    padding-top: 50px;
     padding-bottom: 0px;
     right: -690px;  /* Adjust this to move the main title left/right */
     z-index: 2;
@@ -698,21 +701,13 @@ margin-top: 100px;
     gap: 0px;
     min-width: 280px;
 }
-z
-.resume-image-box {
-    flex: 0 0 auto;
-    display: flex;
-    margin-top:0px;
-    justify-content: center;
-    align-items: center;
-    max-width: 450px;
-}
 
 .resume-image-box img {
-    width: 100%;
+    width:100%;
     padding-top:0px;
-    height: auto;
+    height: 100%;
     display: block;
+    margin-right:10px;
 }
 
 .resume-item {
@@ -728,7 +723,7 @@ z
     font-size: 1.5rem;
     color: #000000;
     background: transparent;
-    padding: 25px;
+    padding: 28px;
     display: flex;
     align-items: center;
     margin-top: 20px ;
@@ -744,7 +739,7 @@ z
 }
 
 .resume-details h3 {
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 700;
     color: #000000;
 }
