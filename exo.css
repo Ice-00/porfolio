@@ -433,7 +433,7 @@ html {
     padding-top: 100px;
     padding-bottom: 50px;
     overflow: hidden;
-    background-image: linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.9)), url('images/img10.jpg');
+    background-image: linear-gradient(rgba(12, 12, 12, 1), rgba(12, 12, 12, 0.9)), url('images/img10.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
